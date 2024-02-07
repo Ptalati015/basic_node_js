@@ -37,7 +37,7 @@
           message: document.getElementById('message').value
         };
 
-        fetch('https://ptalati015.github.io/basic_node_js/api/submit', {
+        fetch('/api/submit', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -64,7 +64,7 @@
       function lookupUser() {
         const userName = document.getElementById('userName').value;
 
-        fetch(`https://ptalati015.github.io/basic_node_js/api/user/${userName}`)
+        fetch(`/api/user/${userName}`)
           .then(response => {
             if (response.ok) {
               return response.json();
